@@ -3,11 +3,7 @@ output_dir: "."
 navbar:
   title: "Allan Alvarenga"
   left:
-    - text: "Home"
+    - text: "Início"
       href: index.html
-    - text: "About Me"
+    - text: "Sobre mim"
       href: about.html
-output:
-  html_document:
-    theme: flatly
-    css: style.css
