@@ -5,8 +5,10 @@ navbar:
   left:
     - text: "Início"
       href: index.html
-    - text: "Projetos"     ##### the new
+    - text: "Pesquisa"     ##### the new
       href: projects.html  ##### stuff
+    - text: "Publicações"
+      href: publicacoes.html
     - text: "Sobre mim"
       href: about.html
 output:
