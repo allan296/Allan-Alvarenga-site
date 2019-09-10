@@ -5,5 +5,11 @@ navbar:
   left:
     - text: "Início"
       href: index.html
+    - text: "Projetos"     ##### the new
+      href: projects.html  ##### stuff
     - text: "Sobre mim"
       href: about.html
+output:
+  html_document:
+    theme: cosmo
+    css: style.css

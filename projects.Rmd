@@ -1,8 +1,6 @@
 ---
-title: "projects"
+title: "Projetos"
 author: "Allan Alvarenga"
-date: "10 de setembro de 2019"
-
 ---
 
 

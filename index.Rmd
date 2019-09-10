@@ -1,12 +1,11 @@
 ---
 title: "Allan M. S. B. de Alvarenga"
-author: "Allan Alvarenga"
-date: "10 de setembro de 2019"
 ---
 
+```{r include=FALSE}
+library(rmarkdown)
+```
+
 ## Allan
-
-
-`rmarkdown::render_site()`
 
 
