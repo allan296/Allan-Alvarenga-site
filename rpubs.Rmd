@@ -9,3 +9,9 @@ output:
     df_print: paged
     fig_caption: true
 ---
+
+
+```{r echo=FALSE,  out.extra='style="float:left; padding:30px"'}
+knitr::include_graphics("Plot padrão-1.png")
+```
+&nbsp;

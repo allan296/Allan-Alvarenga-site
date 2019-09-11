@@ -1,0 +1,146 @@
+---
+title: "Como transformar uma matriz de distância em formato tidy (arrumado)"
+author: |
+  |
+  |
+  Allan Alvarenga, *e-mail: allan_alvarenga@msn.com*
+date: |
+  |
+  |
+  "`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  html_document:
+    code_download: true
+    number_sections: true
+    toc: yes
+    toc_float: yes
+    df_print: paged
+    fig_caption: true
+bibliography: [packages.bib]
+csl: nature.csl
+pandoc_args: [ "--csl", "nature.csl" ]
+---
+
+# Licença {-#Licença}
+
+
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <http://creativecommons.org/licenses/by-sa/4.0/> or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+![License: CC BY-SA 4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png){ width=25% }
+
+# Citação {-}
+
+Sugestão de citação: Alvarenga A.M.S.B. RPubs - Como transformar uma matriz de distância em formato tidy (arrumado) [Internet]. 2019 [cited 2019 Sep 11]. Available from: http://rpubs.com/allan_alvarenga/dist2tidy
+
+# Introdução
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 
+  'knitr','rmarkdown','here','tidyverse','ggsci','cowplot','ggpubr','reshape2','igraph','grid','gridExtra','viridis','tinytex','bookdown','bookdownplus','citr','ggforce','kableExtra','RcolorBrewer', 'bipartite', 'foreach','ggplot2',  'broom','doMc', 'tidyr'), 'packages.bib')
+
+
+```
+
+Os pacotes agrupados no *Tidyverse*[@R-tidyverse] como o *Ggplot2* [@R-ggplot2] utilizam o formato **Tidy**, ou seja "arrumado", chamado também de formato "longo".
+Algumas funções muito úteis como *gather* do pacote *Tidyr*[@R-tidyr] dão conta do recado quando o assunto é transformar do formato largo para o longo.
+Entretanto, para objetos `stats::dist()`, nós utilizamos a função *tidy*, do pacote *broom*[@R-broom] `broom::tidy()` considerado parte do Tidyverse, no entanto, não é carregado junto com o mesmo.
+
+
+Aqui, vamos utilizar o conjunto de dados `iris`:
+
+```{r include=FALSE}
+library(knitr)
+library(rmarkdown)
+```
+
+```{r results='hide'}
+library(broom) # transforma os dados
+library(ggplot2) # plot
+library(viridis) # paleta de cores
+```
+
+# Matriz de distância
+
+Primeiro nós criamos uma matriz de distância utilizando a função `stats::dist()`:
+```{r}
+iris_dist <- stats::dist(t(iris[, 1:4]))
+iris_dist
+```
+
+# Formato longo
+
+Então, transformamos a matriz para o formato longo:
+
+```{r}
+broom::tidy(iris_dist)
+
+# upper: Lógico indicando se deve ou não arrumar a metade superior da matriz de distância. O padrão é o que foi baseado no argumento superior de stats :: dist ().
+broom::tidy(iris_dist, upper = TRUE)
+
+# diagonal: Lógico indicando se deve ou não arrumar os elementos diagonais da matriz de distância. O padrão é o que foi baseado no argumento diag de stats :: dist ().
+broom::tidy(iris_dist, diagonal = TRUE)
+```
+
+# Plot
+
+## Tema do gráfico
+```{r theme_of_graphs, echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
+ggplot2::theme_set(theme_classic(base_size = 6) + theme(
+    axis.text.x =  element_text(size = 10),
+    axis.ticks.x = element_blank(),
+    axis.text.y = element_text(size = 10),
+    plot.title = element_text(size = 12),
+    legend.text = element_text(size =10),
+    legend.title = element_text(size = 10),
+    axis.title.x =  element_text(size = 12),
+    axis.title.y = element_text(size = 12),
+    plot.caption = element_text(size = 10),
+    # panel.border = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line.y = element_line(colour = "black"),
+    axis.line.x = element_line(colour = "black"),
+    legend.position = "none")
+)
+```
+
+## Plot padrão
+```{r Plot padrão, message=FALSE, warning=FALSE, paged.print=FALSE}
+iris_tidy <- broom::tidy(iris_dist)
+
+ggplot2::ggplot(iris_tidy,aes(x=item1, y=item2, fill=distance, label=round(distance,3)))+
+ geom_tile(color="black")+
+  geom_text(size=5,color="white")+
+  scale_fill_viridis()+
+  labs(x = "Item 1",
+       y = "Item 2") 
+```
+
+## Plot Upper
+```{r Plot Upper}
+iris_upper_tidy <- broom::tidy(iris_dist, upper = TRUE)
+
+ggplot2::ggplot(iris_upper_tidy,aes(x=item1, y=item2, fill=distance, label=round(distance,3)))+
+ geom_tile(color="black")+
+  geom_text(size=5,color="white")+
+  scale_fill_viridis()+
+  labs(x = "Item 1",
+       y = "Item 2") 
+```
+
+## Plot diagonal
+```{r Plot diagonal}
+iris_diagonal_tidy <-broom::tidy(iris_dist, diagonal = TRUE)
+
+ggplot2::ggplot(iris_diagonal_tidy,aes(x=item1, y=item2, fill=distance, label=round(distance,3)))+
+ geom_tile(color="black")+
+  geom_text(size=5,color="white")+
+  scale_fill_viridis()+
+  labs(x = "Item 1",
+       y = "Item 2") 
+```
+
+# Referências
