@@ -22,8 +22,7 @@ navbar:
       href: https://twitter.com/AllanSAlvarenga
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/allanalvarenga/
- 
-      
+    
 output:
   html_document:
     theme: sandstone

@@ -6,6 +6,8 @@ title: "Allan M. S. B. de Alvarenga"
 library(knitr)
 library(rmarkdown)
 library(rmdformats)
+library(icon)
+
 
 ## Global options
 options(max.print="100")
