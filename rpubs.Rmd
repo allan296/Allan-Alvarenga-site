@@ -1,0 +1,12 @@
+---
+title: "Rpubs"
+output:
+  html_document:
+    code_download: true
+    theme: default
+    number_sections: true
+    toc: yes
+    toc_float: yes
+    df_print: paged
+    fig_caption: true
+---

@@ -8,7 +8,9 @@ navbar:
     - text: "Pesquisa"     ##### the new
       href: projects.html  ##### stuff
     - text: "Publicações"
-      href: publicacoes.html
+      href: publications.html
+    - text: "RPubs"
+      href: rpubs.html
     - text: "Sobre mim"
       href: about.html
 output:
