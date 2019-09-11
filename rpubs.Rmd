@@ -20,4 +20,4 @@ knitr::include_graphics(here("Rpubs/matriz_quadrada_files/figure-html/Plot_padra
 ```
 &nbsp;
 
-# [**Como transformar uma matriz de distância em formato longo**](http://rpubs.com/allan_alvarenga/dist2tidy) 
+# [*Como transformar uma matriz de distância em formato longo (tidy)*](http://rpubs.com/allan_alvarenga/dist2tidy) 

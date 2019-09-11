@@ -1,5 +1,5 @@
 ---
-title: "Como transformar uma matriz de distância em formato tidy (arrumado)"
+title: "Como transformar uma matriz de distância em formato longo (tidy)"
 author: |
   |
   |
@@ -10,6 +10,7 @@ date: |
   "`r format(Sys.Date(), '%d %B %Y')`"
 output:
   html_document:
+    theme: sandstone
     code_download: true
     number_sections: true
     toc: yes
@@ -30,7 +31,7 @@ This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Inte
 
 # Citação {-}
 
-Sugestão de citação: Alvarenga A.M.S.B. RPubs - Como transformar uma matriz de distância em formato tidy (arrumado) [Internet]. 2019 [cited 2019 Sep 11]. Available from: <http://rpubs.com/allan_alvarenga/dist2tidy>
+Sugestão de citação: Alvarenga A.M.S.B. RPubs - Como transformar uma matriz de distância em formato longo (tidy) [Internet]. 2019 [cited 2019 Sep 11]. Available from: <http://rpubs.com/allan_alvarenga/dist2tidy>
 
 # Introdução
 
