@@ -3,5 +3,6 @@ title: "Sobre mim"
 
 ---
 
-
-sobre **mim**
+- *Nome:* Allan Maurício Sanches Baptista de Alvarenga
+- *Ocupação:* Doutorando em Ecologia e conservação pela Universidade Federal do Paraná - UFPR
+- *Formação acadêmica:* Possuo formação em nível técnico em Gestão empresarial pelo Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - IFSP (2008), graduação em Ciências Biológicas (Bacharelado) pela Universidade do Vale do Paraíba - UNIVAP (2013); mestrado em Botânica pela Universidade Federal do Paraná - UFPR (2015) e atualmente curso Doutorado em Ecologia e Conservação pela mesma instituição.
