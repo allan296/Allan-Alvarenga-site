@@ -1,0 +1,22 @@
+---
+title: "Contato"
+output: html_document
+---
+
+Eu sempre estou interessado em me envolver em novos projetos ou me conectar com novas pessoas. Sinta-se livre para entrar em contato!
+
+**e-mails:** 1- allan_alvarenga@msn.com, 2- allan.alvarenga@gmail.com, 3- allan.alvarenga@ufpr.br
+
+&nbsp;
+
+Meu local de trabalho atualmente é no **Laboratório de Ecologia e Evolução de interações** - **LEEI**, parte do meta-laboratório de **Interações biológicas** (antigo LEMPE).
+
+**Endereço:**
+
+Universidade Federal do Paraná - UFPR
+
+Avenida Coronel Francisco H. dos Santos, 100
+
+Caixa Postal 19020,
+
+81.531-980 – Curitiba, PR

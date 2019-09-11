@@ -13,6 +13,17 @@ navbar:
       href: rpubs.html
     - text: "Sobre mim"
       href: about.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: contact.html
+    - icon: fa-github fa-lg
+      href: https://github.com/allan296
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/AllanSAlvarenga
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/allanalvarenga/
+ 
+      
 output:
   html_document:
     theme: sandstone
