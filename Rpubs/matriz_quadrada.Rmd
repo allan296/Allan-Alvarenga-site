@@ -30,7 +30,7 @@ This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Inte
 
 # Citação {-}
 
-Sugestão de citação: Alvarenga A.M.S.B. RPubs - Como transformar uma matriz de distância em formato tidy (arrumado) [Internet]. 2019 [cited 2019 Sep 11]. Available from: http://rpubs.com/allan_alvarenga/dist2tidy
+Sugestão de citação: Alvarenga A.M.S.B. RPubs - Como transformar uma matriz de distância em formato tidy (arrumado) [Internet]. 2019 [cited 2019 Sep 11]. Available from: <http://rpubs.com/allan_alvarenga/dist2tidy>
 
 # Introdução
 
@@ -108,7 +108,7 @@ ggplot2::theme_set(theme_classic(base_size = 6) + theme(
 ```
 
 ## Plot padrão
-```{r Plot padrão, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r Plot_padrao, message=FALSE, warning=FALSE, paged.print=FALSE}
 iris_tidy <- broom::tidy(iris_dist)
 
 ggplot2::ggplot(iris_tidy,aes(x=item1, y=item2, fill=distance, label=round(distance,3)))+
@@ -120,7 +120,7 @@ ggplot2::ggplot(iris_tidy,aes(x=item1, y=item2, fill=distance, label=round(dista
 ```
 
 ## Plot Upper
-```{r Plot Upper}
+```{r Plot_upper}
 iris_upper_tidy <- broom::tidy(iris_dist, upper = TRUE)
 
 ggplot2::ggplot(iris_upper_tidy,aes(x=item1, y=item2, fill=distance, label=round(distance,3)))+
@@ -132,7 +132,7 @@ ggplot2::ggplot(iris_upper_tidy,aes(x=item1, y=item2, fill=distance, label=round
 ```
 
 ## Plot diagonal
-```{r Plot diagonal}
+```{r Plot_diagonal}
 iris_diagonal_tidy <-broom::tidy(iris_dist, diagonal = TRUE)
 
 ggplot2::ggplot(iris_diagonal_tidy,aes(x=item1, y=item2, fill=distance, label=round(distance,3)))+

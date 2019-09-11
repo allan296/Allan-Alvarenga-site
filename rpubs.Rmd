@@ -8,10 +8,16 @@ output:
     toc_float: yes
     df_print: paged
     fig_caption: true
+    
 ---
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE, results='hide'}
+library(here)
+```
 
 
-```{r echo=FALSE,  out.extra='style="float:left; padding:30px"'}
-knitr::include_graphics("Plot padrão-1.png")
+```{r echo=FALSE, message=FALSE,  out.extra='style="float:left; padding:30px"'}
+knitr::include_graphics(here("Rpubs/matriz_quadrada_files/figure-html/Plot_padrao-1.png"))
 ```
 &nbsp;
+
+# [**Como transformar uma matriz de distância em formato longo**](http://rpubs.com/allan_alvarenga/dist2tidy) 
