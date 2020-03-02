@@ -8,7 +8,7 @@ knitr::include_graphics("files/foto_perfil.jpg")
 ```
 &nbsp;
 
-Meu principal interesse é usar as linguagens de programação e a modelagem matemática para responder questões ecológicas. No meu doutorado avaliei o efeito do comportamento de escolha ativa dos recursos por parte dos consumidores --- os consumidores selecionam os recursos que tentarão consumir baseando-se no valor e maneabilidade do recurso --- garantindo assim, uma maior aptidão do consumidor. O painel desse trabalho foi apresentado no **XXXIII Congresso brasileiro de zoologia** e está disponivel [aqui](files/poster_zoo_final_allan.pdf).
+Meu principal interesse é usar as linguagens de programação e a modelagem matemática para responder questões ecológicas. No meu doutorado avaliei o efeito do comportamento de escolha ativa dos recursos por parte dos consumidores --- os consumidores selecionam os recursos que tentarão consumir baseando-se no valor e maneabilidade do recurso --- garantindo assim, uma maior aptidão do consumidor. O painel com os principais resultados desse trabalho foi apresentado no **XXXIII Congresso brasileiro de zoologia** e está disponivel [aqui](files/poster_zoo_final_allan.pdf).
 
 Meu currículo lattes está disponível [aqui]( http://lattes.cnpq.br/5699607066764995)
 
