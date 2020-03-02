@@ -8,6 +8,8 @@ knitr::include_graphics("foto_perfil.jpg")
 ```
 &nbsp;
 
+Meu principal interesse é usar as linguagens de programação e a modelagem matemática para responder questões ecológicas.
+
 **Formação acadêmica**
 
 **Universidade Federal do Paraná - UFPR, Curitiba — PR **
