@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -245,6 +244,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -276,6 +276,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -355,9 +361,6 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Início</a>
-</li>
-<li>
   <a href="projects.html">Pesquisa</a>
 </li>
 <li>
@@ -417,7 +420,7 @@ div.tocify {
 
 
 <p><img src="Rpubs/matriz_quadrada_files/figure-html/Plot_padrao-1.png" width="672" style="float:left; padding:30px" />  </p>
-<div id="como-transformar-uma-matriz-de-distancia-em-formato-longo-tidy" class="section level1">
+<div id="como-transformar-uma-matriz-de-distância-em-formato-longo-tidy" class="section level1">
 <h1><span class="header-section-number">1</span> <a href="http://rpubs.com/allan_alvarenga/dist2tidy"><em>Como transformar uma matriz de distância em formato longo (tidy)</em></a></h1>
 </div>
 

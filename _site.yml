@@ -3,8 +3,6 @@ output_dir: "."
 navbar:
   title: "Allan Alvarenga"
   left:
-    - text: "Início"
-      href: index.html
     - text: "Pesquisa"     ##### the new
       href: projects.html  ##### stuff
     - text: "Publicações"
