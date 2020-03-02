@@ -25,5 +25,31 @@ opts_knit$set(width=100)
 ```
 
 
+```{r echo=FALSE,  out.extra='style="float:left; padding:30px"'}
+knitr::include_graphics("files/foto_perfil.jpg")
+```
+&nbsp;
+
+Meu principal interesse é usar as linguagens de programação e a modelagem matemática para responder questões ecológicas. No meu doutorado avaliei o efeito do comportamento de escolha ativa dos recursos por parte dos consumidores --- os consumidores selecionam os recursos que tentarão consumir baseando-se no valor e maneabilidade do recurso --- garantindo assim, uma maior aptidão do consumidor. O painel com os principais resultados desse trabalho foi apresentado no **XXXIII Congresso brasileiro de zoologia** e está disponivel [aqui](files/poster_zoo_final_allan.pdf).
+
+Meu currículo lattes está disponível [aqui]( http://lattes.cnpq.br/5699607066764995)
+
+## **Formação acadêmica**
+
+**Universidade Federal do Paraná - UFPR, Curitiba — PR **
+
+  * 06/2015 - 09/2019 - Doutorado em Ecologia e Conservação (CAPES 6)
+  * 04/2013 - 05/2015 - Mestrado em botânica (CAPES 4)
+    
+**Universidade do Vale do Paraíba - UNIVAP, São José dos Campos — SP **
+
+  * 02/2009 - 01/2013 - Graduação em Ciências biológicas (Bacharelado)
+    
+**Instituto Federal de São Paulo - IFSP, Caraguatatuba — SP **
+
+  * 07/2007 - 12/2008 - Técnico em gestão empresarial
+
+
+
 
 

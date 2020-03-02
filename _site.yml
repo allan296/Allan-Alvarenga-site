@@ -7,10 +7,8 @@ navbar:
       href: projects.html  ##### stuff
     - text: "Publicações"
       href: publications.html
-    - text: "RPubs"
+    - text: "Tutoriais"
       href: rpubs.html
-    - text: "Sobre mim"
-      href: about.html
   right:
     - icon: fa-envelope fa-lg
       href: contact.html
@@ -24,4 +22,5 @@ navbar:
 output:
   html_document:
     theme: sandstone
+    highlight: textmate
     css: style.css

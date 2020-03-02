@@ -1,5 +1,5 @@
 ---
-title: "Rpubs"
+title: "Tutoriais"
 output:
   html_document:
     code_download: true
@@ -16,8 +16,9 @@ library(here)
 
 
 ```{r echo=FALSE, message=FALSE,  out.extra='style="float:left; padding:30px"'}
-knitr::include_graphics(here("Rpubs/matriz_quadrada_files/figure-html/Plot_padrao-1.png"))
+knitr::include_graphics(here("Tutoriais/matriz_quadrada_files/figure-html/Plot_padrao-1.png"))
 ```
 &nbsp;
 
-# [*Como transformar uma matriz de distância em formato longo (tidy)*](http://rpubs.com/allan_alvarenga/dist2tidy) 
+# 
+- [Como transformar uma matriz de distância em formato longo (tidy)](Tutoriais/_site/matriz_quadrada.html)
