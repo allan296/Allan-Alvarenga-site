@@ -4,12 +4,23 @@ title: "Allan Maurício Sanches Baptista de Alvarenga"
 ---
 
 ```{r echo=FALSE,  out.extra='style="float:left; padding:30px"'}
-knitr::include_graphics("foto_perfil2.jpg")
+knitr::include_graphics("foto_perfil.jpg")
 ```
 &nbsp;
 
-# **Resumo**
+**Formação acadêmica**
 
-- **Formação acadêmica:** Possuo formação em nível técnico em Gestão empresarial pelo Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - IFSP (2008), graduação em Ciências Biológicas (Bacharelado) pela Universidade do Vale do Paraíba - UNIVAP (2013); mestrado em Botânica pela Universidade Federal do Paraná - UFPR (2015) e atualmente curso Doutorado em Ecologia e Conservação pela mesma instituição.
+**Universidade Federal do Paraná - UFPR, Curitiba — PR **
 
-- **Interesses:**
+  * 06/2015 - 09/2019 - Doutorado em Ecologia e Conservação (CAPES 6)
+  * 04/2013 - 05/2015 - Mestrado em botânica (CAPES 4)
+    
+**Universidade do Vale do Paraíba - UNIVAP, São José dos Campos — SP **
+
+  * 02/2009 - 01/2013 - Graduação em Ciências biológicas (Bacharelado)
+    
+**Instituto Federal de São Paulo - IFSP, Caraguatatuba — SP **
+
+  * 07/2007 - 12/2008 - Técnico em gestão empresarial
+
+
