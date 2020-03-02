@@ -24,6 +24,6 @@ opts_chunk$set(echo=TRUE,
 opts_knit$set(width=100)
 ```
 
-## Allan
+
 
 
