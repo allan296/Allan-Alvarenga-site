@@ -10,7 +10,7 @@ knitr::include_graphics("files/foto_perfil.jpg")
 
 Meu principal interesse é usar as linguagens de programação e a modelagem matemática para responder questões ecológicas. No doutorado avaliei o efeito do comportamento de escolha ativa dos recursos por parte dos consumidores --- os consumidores selecionam os recursos que tentarão consumir baseando-se no valor e maneabilidade do recurso--- garantindo assim, uma maior aptidão do consumidor.
 
-O painel apresentado no **XXXIII Congresso brasileiro de zoologia** está disponivel [aqui]("files/poster_zoo_final_allan.pdf")
+O painel apresentado no **XXXIII Congresso brasileiro de zoologia** está disponivel [aqui]('files/poster_zoo_final_allan.pdf') 
 
 ## **Formação acadêmica**
 
