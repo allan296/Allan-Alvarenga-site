@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Files on Tutoriais</title>
+    <link>/files/</link>
+    <description>Recent content in Files on Tutoriais</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© 2019. Theme by &lt;a href=&#34;https://github.com/MeiK2333/github-style&#34;&gt;&lt;span&gt;github-style&lt;/span&gt;&lt;/a&gt;</copyright>
+    
+	<atom:link href="/files/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como transformar uma matriz de distância em formato longo (tidy)</title>
+      <link>/files/matriz_quadrada/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/files/matriz_quadrada/</guid>
+      <description>Licença This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+License: CC BY-SA 4.0
+  Citação Sugestão de citação: Alvarenga A.M.S.B. RPubs - Como transformar uma matriz de distância em formato longo (tidy) [Internet]. 2019 [cited 2019 Sep 11]. Available from: http://rpubs.</description>
+    </item>
+    
+  </channel>
+</rss>

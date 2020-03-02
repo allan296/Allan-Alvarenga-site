@@ -1,0 +1,181 @@
+---
+title: "Como transformar uma matriz de distância em formato longo (tidy)"
+author: |
+  |
+  |
+  Allan Alvarenga, *e-mail: allan_alvarenga@msn.com*
+date: |
+  |
+  |
+  "02 March 2020"
+output:
+  html_document:
+    theme: sandstone
+    code_download: true
+    number_sections: true
+    toc: yes
+    toc_float: yes
+    df_print: paged
+    fig_caption: true
+bibliography: [packages.bib]
+csl: nature.csl
+pandoc_args: [ "--csl", "nature.csl" ]
+---
+
+
+
+<div id="Licença" class="section level1 unnumbered">
+<h1>Licença</h1>
+<p>This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <a href="http://creativecommons.org/licenses/by-sa/4.0/" class="uri">http://creativecommons.org/licenses/by-sa/4.0/</a> or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.</p>
+<div class="figure">
+<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png" alt="License: CC BY-SA 4.0" style="width:25.0%" />
+<p class="caption">License: CC BY-SA 4.0</p>
+</div>
+</div>
+<div id="citação" class="section level1 unnumbered">
+<h1>Citação</h1>
+<p>Sugestão de citação: Alvarenga A.M.S.B. RPubs - Como transformar uma matriz de distância em formato longo (tidy) [Internet]. 2019 [cited 2019 Sep 11]. Available from: <a href="http://rpubs.com/allan_alvarenga/dist2tidy" class="uri">http://rpubs.com/allan_alvarenga/dist2tidy</a></p>
+</div>
+<div id="introdução" class="section level1">
+<h1>Introdução</h1>
+<p>Os pacotes agrupados no <em>Tidyverse</em><span class="citation"><sup>1</sup></span> como o <em>Ggplot2</em><span class="citation"><sup>2</sup></span> utilizam o formato <strong>Tidy</strong>, ou seja “arrumado”, chamado também de formato “longo”.
+Algumas funções muito úteis como <em>gather</em> do pacote <em>Tidyr</em><span class="citation"><sup>3</sup></span> dão conta do recado quando o assunto é transformar do formato largo para o longo.
+Entretanto, para objetos <code>stats::dist()</code>, nós utilizamos a função <em>tidy</em>, do pacote <em>broom</em><span class="citation"><sup>4</sup></span> <code>broom::tidy()</code> considerado parte do Tidyverse, no entanto, não é carregado junto com o mesmo.</p>
+<p>Aqui, vamos utilizar o conjunto de dados <code>iris</code>:</p>
+<pre class="r"><code>library(broom) # transforma os dados
+library(ggplot2) # plot
+library(viridis) # paleta de cores</code></pre>
+<pre><code>## Loading required package: viridisLite</code></pre>
+</div>
+<div id="matriz-de-distância" class="section level1">
+<h1>Matriz de distância</h1>
+<p>Primeiro nós criamos uma matriz de distância utilizando a função <code>stats::dist()</code>:</p>
+<pre class="r"><code>iris_dist &lt;- stats::dist(t(iris[, 1:4]))
+iris_dist</code></pre>
+<pre><code>##              Sepal.Length Sepal.Width Petal.Length
+## Sepal.Width      36.15785                         
+## Petal.Length     28.96619    25.77809             
+## Petal.Width      57.18304    25.86407     33.86473</code></pre>
+</div>
+<div id="formato-longo" class="section level1">
+<h1>Formato longo</h1>
+<p>Então, transformamos a matriz para o formato longo:</p>
+<pre class="r"><code>broom::tidy(iris_dist)</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   item1        item2        distance
+##   &lt;fct&gt;        &lt;fct&gt;           &lt;dbl&gt;
+## 1 Sepal.Width  Sepal.Length     36.2
+## 2 Petal.Length Sepal.Length     29.0
+## 3 Petal.Width  Sepal.Length     57.2
+## 4 Petal.Length Sepal.Width      25.8
+## 5 Petal.Width  Sepal.Width      25.9
+## 6 Petal.Width  Petal.Length     33.9</code></pre>
+<pre class="r"><code># upper: Lógico indicando se deve ou não arrumar a metade superior da matriz de distância. O padrão é o que foi baseado no argumento superior de stats :: dist ().
+broom::tidy(iris_dist, upper = TRUE)</code></pre>
+<pre><code>## # A tibble: 12 x 3
+##    item1        item2        distance
+##    &lt;fct&gt;        &lt;fct&gt;           &lt;dbl&gt;
+##  1 Sepal.Width  Sepal.Length     36.2
+##  2 Petal.Length Sepal.Length     29.0
+##  3 Petal.Width  Sepal.Length     57.2
+##  4 Sepal.Length Sepal.Width      36.2
+##  5 Petal.Length Sepal.Width      25.8
+##  6 Petal.Width  Sepal.Width      25.9
+##  7 Sepal.Length Petal.Length     29.0
+##  8 Sepal.Width  Petal.Length     25.8
+##  9 Petal.Width  Petal.Length     33.9
+## 10 Sepal.Length Petal.Width      57.2
+## 11 Sepal.Width  Petal.Width      25.9
+## 12 Petal.Length Petal.Width      33.9</code></pre>
+<pre class="r"><code># diagonal: Lógico indicando se deve ou não arrumar os elementos diagonais da matriz de distância. O padrão é o que foi baseado no argumento diag de stats :: dist ().
+broom::tidy(iris_dist, diagonal = TRUE)</code></pre>
+<pre><code>## # A tibble: 10 x 3
+##    item1        item2        distance
+##    &lt;fct&gt;        &lt;fct&gt;           &lt;dbl&gt;
+##  1 Sepal.Length Sepal.Length      0  
+##  2 Sepal.Width  Sepal.Length     36.2
+##  3 Petal.Length Sepal.Length     29.0
+##  4 Petal.Width  Sepal.Length     57.2
+##  5 Sepal.Width  Sepal.Width       0  
+##  6 Petal.Length Sepal.Width      25.8
+##  7 Petal.Width  Sepal.Width      25.9
+##  8 Petal.Length Petal.Length      0  
+##  9 Petal.Width  Petal.Length     33.9
+## 10 Petal.Width  Petal.Width       0</code></pre>
+</div>
+<div id="plot" class="section level1">
+<h1>Plot</h1>
+<div id="tema-do-gráfico" class="section level2">
+<h2>Tema do gráfico</h2>
+<pre class="r"><code>ggplot2::theme_set(theme_classic(base_size = 6) + theme(
+    axis.text.x =  element_text(size = 10),
+    axis.ticks.x = element_blank(),
+    axis.text.y = element_text(size = 10),
+    plot.title = element_text(size = 12),
+    legend.text = element_text(size =10),
+    legend.title = element_text(size = 10),
+    axis.title.x =  element_text(size = 12),
+    axis.title.y = element_text(size = 12),
+    plot.caption = element_text(size = 10),
+    # panel.border = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line.y = element_line(colour = &quot;black&quot;),
+    axis.line.x = element_line(colour = &quot;black&quot;),
+    legend.position = &quot;none&quot;)
+)</code></pre>
+</div>
+<div id="plot-padrão" class="section level2">
+<h2>Plot padrão</h2>
+<pre class="r"><code>iris_tidy &lt;- broom::tidy(iris_dist)
+
+ggplot2::ggplot(iris_tidy,aes(x=item1, y=item2, fill=distance, label=round(distance,3)))+
+ geom_tile(color=&quot;black&quot;)+
+  geom_text(size=5,color=&quot;white&quot;)+
+  scale_fill_viridis()+
+  labs(x = &quot;Item 1&quot;,
+       y = &quot;Item 2&quot;) </code></pre>
+<p><img src="/files/matriz_quadrada_files/figure-html/Plot_padrao-1.png" width="672" /></p>
+</div>
+<div id="plot-upper" class="section level2">
+<h2>Plot Upper</h2>
+<pre class="r"><code>iris_upper_tidy &lt;- broom::tidy(iris_dist, upper = TRUE)
+
+ggplot2::ggplot(iris_upper_tidy,aes(x=item1, y=item2, fill=distance, label=round(distance,3)))+
+ geom_tile(color=&quot;black&quot;)+
+  geom_text(size=5,color=&quot;white&quot;)+
+  scale_fill_viridis()+
+  labs(x = &quot;Item 1&quot;,
+       y = &quot;Item 2&quot;) </code></pre>
+<p><img src="/files/matriz_quadrada_files/figure-html/Plot_upper-1.png" width="672" /></p>
+</div>
+<div id="plot-diagonal" class="section level2">
+<h2>Plot diagonal</h2>
+<pre class="r"><code>iris_diagonal_tidy &lt;-broom::tidy(iris_dist, diagonal = TRUE)
+
+ggplot2::ggplot(iris_diagonal_tidy,aes(x=item1, y=item2, fill=distance, label=round(distance,3)))+
+ geom_tile(color=&quot;black&quot;)+
+  geom_text(size=5,color=&quot;white&quot;)+
+  scale_fill_viridis()+
+  labs(x = &quot;Item 1&quot;,
+       y = &quot;Item 2&quot;) </code></pre>
+<p><img src="/files/matriz_quadrada_files/figure-html/Plot_diagonal-1.png" width="672" /></p>
+</div>
+</div>
+<div id="referências" class="section level1 unnumbered">
+<h1>Referências</h1>
+<div id="refs" class="references">
+<div id="ref-R-tidyverse">
+<p>1. Wickham, H. <em>Tidyverse: Easily install and load the ’tidyverse’</em>. (2019).</p>
+</div>
+<div id="ref-R-ggplot2">
+<p>2. Wickham, H. <em>et al.</em> <em>Ggplot2: Create elegant data visualisations using the grammar of graphics</em>. (2019).</p>
+</div>
+<div id="ref-R-tidyr">
+<p>3. Wickham, H. &amp; Henry, L. <em>Tidyr: Tidy messy data</em>. (2020).</p>
+</div>
+<div id="ref-R-broom">
+<p>4. Robinson, D. &amp; Hayes, A. <em>Broom: Convert statistical analysis objects into tidy tibbles</em>. (2019).</p>
+</div>
+</div>
+</div>
