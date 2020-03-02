@@ -21,4 +21,4 @@ knitr::include_graphics(here("tutorials/content/files/matriz_quadrada_files/figu
 &nbsp;
 
 # 
-- [Como transformar uma matriz de distância em formato longo (tidy)](Tutoriais/_site/matriz_quadrada.html)
+- [Como transformar uma matriz de distância em formato longo (tidy)](tutorials/content/files/matriz_quadrada.html)
