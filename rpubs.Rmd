@@ -15,10 +15,3 @@ library(here)
 ```
 
 
-```{r echo=FALSE, message=FALSE,  out.extra='style="float:left; padding:30px"'}
-knitr::include_graphics(here("tutorials/content/files/matriz_quadrada_files/figure-html/Plot_padrao-1.png"))
-```
-&nbsp;
-
-# 
-- [Como transformar uma matriz de distância em formato longo (tidy)](tutorials/content/files/matriz_quadrada.html)

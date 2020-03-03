@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Tutoriais</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on Tutoriais</description>
+    <title>data wrangling on Tutoriais</title>
+    <link>/tags/data-wrangling/</link>
+    <description>Recent content in data wrangling on Tutoriais</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2019. Theme by &lt;a href=&#34;https://github.com/MeiK2333/github-style&#34;&gt;&lt;span&gt;github-style&lt;/span&gt;&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/data-wrangling/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>teste</title>
-      <link>/tags/teste/</link>
+      <title>Como transformar uma matriz de distância em formato longo (tidy)</title>
+      <link>/post/como-transformar-uma-matriz-de-dist%C3%A2ncia-em-formato-longo-tidy/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/teste/</guid>
+      <guid>/post/como-transformar-uma-matriz-de-dist%C3%A2ncia-em-formato-longo-tidy/</guid>
       <description></description>
     </item>
     
